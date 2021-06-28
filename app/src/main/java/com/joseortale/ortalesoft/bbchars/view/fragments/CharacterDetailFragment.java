@@ -28,6 +28,7 @@ import com.joseortale.ortalesoft.bbchars.model.Character;
 import com.joseortale.ortalesoft.bbchars.view.activities.MainActivity;
 import com.joseortale.ortalesoft.bbchars.view.adapters.CharactersAdapter;
 import com.joseortale.ortalesoft.bbchars.viewmodel.CharactersViewModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +93,8 @@ public class CharacterDetailFragment extends Fragment {
             binding.tvNickname.setText(character.getNickname());
 
             int defaultMargin = (int) context.getResources().getDimension(R.dimen.default_padding);
+
+            Picasso.get().load(character.getImg()).resize(250, 250).centerCrop().into(binding.ivImage);
 
             if (character.getOccupation().isEmpty()) {
                 binding.lineOccupation.setVisibility(View.GONE);

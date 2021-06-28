@@ -15,6 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <ImageView
+            android:id="@+id/iv_image"
+            android:padding="@dimen/default_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -30,6 +36,29 @@
 
             <TextView
                 android:id="@+id/tv_name"
+                android:text="@string/placeholder"
+                android:padding="@dimen/default_padding"
+                android:textColor="@color/black"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_label_photo"
+                android:text="@string/label_name"
+                android:padding="@dimen/default_padding"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_photo"
                 android:text="@string/placeholder"
                 android:padding="@dimen/default_padding"
                 android:textColor="@color/black"
